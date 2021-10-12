@@ -38,8 +38,9 @@
     list-style: none;
     background: linear-gradient(90deg, #B65BD7, #78b5de);
     padding: 2em 0;
+    opacity: 0;
 
-    transition: transform 500ms;
+    transition: 500ms;
     transform-style: preserve-3d;
     transform: perspective(350px) rotateX(90deg);
     transform-origin: center top;
@@ -62,16 +63,19 @@
   }
 
   &__item:hover &__submenu {
+    opacity: 1;
+
     transform: perspective(350px) rotateX(0deg);
-    transition-delay: 500ms;
+    transition-delay: 300ms;
   }
 
   &__subsubmenu {
     list-style: none;
     background: linear-gradient(90deg, #78b5de, #B65BD7);
     padding: 1em 3em;
+    opacity: 0;
 
-    transition: transform 500ms;
+    transition: 500ms;
     transform-style: preserve-3d;
     transform: translateX(100%) perspective(350px) rotateX(90deg);
     transform-origin: center top;
@@ -88,7 +92,9 @@
   }
 
   &__submenu-item:hover &__subsubmenu {
+    opacity: 1;
+
     transform: translateX(100%) perspective(350px) rotateX(0deg);
-    transition-delay: 500ms;
+    transition-delay: 300ms;
   }
 }

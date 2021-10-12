@@ -49,11 +49,10 @@
   background: -o-linear-gradient(left, #B65BD7, #78b5de);
   background: linear-gradient(90deg, #B65BD7, #78b5de);
   padding: 2em 0;
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  -o-transition: transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform: perspective(350px) rotateX(90deg);
@@ -81,11 +80,12 @@
   text-decoration: underline;
 }
 .menu-3d-visor__item:hover .menu-3d-visor__submenu {
+  opacity: 1;
   -webkit-transform: perspective(350px) rotateX(0deg);
           transform: perspective(350px) rotateX(0deg);
-  -webkit-transition-delay: 500ms;
-       -o-transition-delay: 500ms;
-          transition-delay: 500ms;
+  -webkit-transition-delay: 300ms;
+       -o-transition-delay: 300ms;
+          transition-delay: 300ms;
 }
 .menu-3d-visor__subsubmenu {
   list-style: none;
@@ -93,11 +93,10 @@
   background: -o-linear-gradient(left, #78b5de, #B65BD7);
   background: linear-gradient(90deg, #78b5de, #B65BD7);
   padding: 1em 3em;
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  -o-transition: transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform: translateX(100%) perspective(350px) rotateX(90deg);
@@ -116,9 +115,10 @@
   text-decoration: underline;
 }
 .menu-3d-visor__submenu-item:hover .menu-3d-visor__subsubmenu {
+  opacity: 1;
   -webkit-transform: translateX(100%) perspective(350px) rotateX(0deg);
           transform: translateX(100%) perspective(350px) rotateX(0deg);
-  -webkit-transition-delay: 500ms;
-       -o-transition-delay: 500ms;
-          transition-delay: 500ms;
+  -webkit-transition-delay: 300ms;
+       -o-transition-delay: 300ms;
+          transition-delay: 300ms;
 }
